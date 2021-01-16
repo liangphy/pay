@@ -23,7 +23,7 @@
             var memo = getQueryVariable("memo");
             var url = "alipays://platformapi/startapp?appId=09999988&actionType=toAccount&goBack=NO&amount=" + amount + "&account=" + account + "&memo=" + memo;
 
-            $("#toZZ").href = url;
+            $("#toZZ").attr("href",url);
             $("#toZZ").click();
         });
 
