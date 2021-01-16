@@ -23,12 +23,8 @@
             var url = "https://pay-orcin.vercel.app/pay.html?amount=" + amount + "&account=" + account + "&memo=" + memo;
 
             $("#toAlipay").attr("href", "alipays://platformapi/startapp?appId=20000067&url=" + encodeURIComponent(url));
-            setTimeout(
-                function () {
-                    $("#toAlipay").click();
-                },
-                1000
-            );
+            window.location.href="alipays://platformapi/startapp?appId=20000067&url=" + encodeURIComponent(url);
+            return false;
         });
 
 
